@@ -218,4 +218,3 @@ function createColorBox(color, label) {
 }
 
 legend.addTo(map);
-
