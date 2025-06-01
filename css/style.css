@@ -1,0 +1,288 @@
+/* Style Kerangka Secara Umum */
+html {
+    scroll-behavior: smooth;
+    font-family: sans-serif;
+    caret-color: transparent;
+    }
+    body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    }
+    /* Seluruh Komponen Pada Header */
+    .logo {
+    display: flex; /* Use flexbox */
+    align-items: center; /* Align items vertically */
+    }
+    .logo img {
+    width: 80px; /* Set the width of the logo */
+    margin-right: 10px; /* Add some space between the image and title */
+    }
+    .logo h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    }
+    header nav {
+    display: flex;
+    justify-content: flex-start;
+    }
+    header nav a {
+    color:#E8EBD2;
+    text-decoration:none;
+    font-weight: bold;
+    margin: 0 20px;
+    }
+    #navbar {
+    background-color: #80bfff; /* Soft blue color without transparency */
+    color: #E8EBD2;
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    border-bottom: 2px solid #333;
+    font-family: 'Montserrat', sans-serif;
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    }
+    .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    }
+    .logo h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    }
+    nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    }
+    nav ul li {
+    display: inline;
+    margin-left: 20px;
+    }
+    nav ul li:first-child {
+    margin-left: 0;
+    }
+    nav ul li a {
+    color: #E8EBD2;
+    text-decoration: none;
+    font-size: 16px;
+    position: relative; /* Needed for pseudo-element positioning */
+    }
+    nav ul li a::before {
+    content: '';
+    position: absolute;
+    top: -7px; /* Move the pseudo-element up by half of the hover size */
+    left: -7px; /* Move the pseudo-element left by half of the hover size */
+    width: calc(100% + 14px); /* Expand the width by 14 pixels (7px on each side) */
+    height: calc(100% + 14px); /* Expand the height by 14 pixels (7px on each side) */
+    background-color: #0d57a1; /* Background color without transparency */
+    border-radius: 10px; /* Rounded corners */
+    z-index: -1; /* Behind the text */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    }
+    nav ul li a:hover::before {
+        color: #80bfff; /* Adjusted font color to match hover color */
+}
+
+.hero-section{
+margin-top: 60px; /* Adjust margin to make room for fixed navbar */
+background-image:
+url('https://www.tripsavvy.com/thmb/SOnmosQsIiXiHzNonv2BDMGC4n0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1004877052-58ce1095ed954946a94477fb25766c0f.jpg'); /* Replace
+'city-background.jpg' with your image */
+background-size: cover;
+background-position: center;
+height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+color: white;
+text-align: center;
+}
+
+.hero-content {
+max-width: 1800px;
+padding: 20px;
+background-color: rgba(0, 0, 0, 0.5);
+border-radius: 10px;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+color: #E8EBD2;
+}
+
+/* Map Section */
+#map {
+    width: 95%;
+    height: 800px;
+    background-color: lightgray;
+    margin: 40px auto; /* Adjusted margin for space */
+    border: 2px solid #ccc; /* Add a border with a subtle color */
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative; /* Relative positioning for child elements */
+    z-index: 1; /* Set z-index to be behind the header */
+    }
+    #map-section h2 {
+    text-align: center;
+    margin-top: 20;
+    font-size: 28px;
+    margin-bottom: 20px;
+    }
+    * Data Section Styles */
+
+#data-section {
+background-color: #f9f9f9;
+padding: 60px 0;
+}
+#data-section .container {
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 20px;
+justify-content: flex-start;
+}
+#data-section h2 {
+text-align: center;
+font-size: 36px;
+margin-bottom: 40px;
+clear: both;
+}
+.column {
+flex: 0 0 calc(33.33% - 20px);
+max-width: calc(33.33% - 20px);
+margin-bottom: 40px;
+}
+.data-item {
+background-color: white;
+border-radius: 10px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+overflow: hidden;
+margin: auto 10px;
+}
+.data-item img {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    }
+    .description {
+    padding: 20px;
+    height: 500px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .description h3 {
+    margin-top: 0;
+    font-size: 24px;
+    }
+    .description p {
+    color: #555;
+    font-size: 16px;
+    }
+
+    /* Author Section */
+#author-section {
+    background-color: #E8EBD2;
+    padding: 40px 20px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: justify;
+    }
+    .author-content {
+    max-width: 800px;
+    margin: 0 auto;
+    }
+    .author-content h2 {
+    text-align: center;
+    }
+    .author-name {
+    text-align: center; /* Center-align only the author's name */
+    }
+    .profile-picture {
+    height: 100px;
+    width: auto;
+    border-radius: 50%;
+    margin: 0 auto 20px; /* Center the picture horizontally and add margin at the bottom */
+    display: block; /* Ensure it behaves as a block element */
+    }
+    
+    #footer {
+    background-color: #80bfff;
+    color: #E8EBD2;
+    text-align: center;
+    padding: 20px;
+    font-family: 'Montserrat', sans-serif;
+    flex-shrink: 0;
+    }
+
+  /* Container legenda */
+.legend {
+    background-color: white;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    font-family: Arial, sans-serif;
+    line-height: 1.4;
+    min-width: 150px;
+  }
+  
+  /* Judul utama legenda */
+  .legend > p:first-child {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+  }
+  
+  /* Sub-judul (kategori) */
+  .legend > p {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 15px 0 5px 0;
+  }
+  
+  /* Item legenda: container fleksibel untuk simbol dan label */
+  .legend div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  
+  /* Kotak warna untuk tutupan lahan */
+  .legend div > div {
+    width: 18px;
+    height: 18px;
+    border: 1px solid #000;
+    flex-shrink: 0;
+  }
+  
+  /* Spasi antara simbol dan teks */
+  .legend span {
+    margin-left: 8px;
+  }
+  
+  /* Styling khusus untuk SVG pada item Infrastruktur dan Batas Administrasi */
+  .legend svg {
+    flex-shrink: 0;
+    width: 30px;
+    height: 20px;
+  }
+  
+  /* Agar ikon rumah pada fitur home (jika menggunakan) terlihat rapi */
+  .leaflet-control-custom {
+    background-color: white;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    user-select: none;
+  }
+  
